@@ -34,6 +34,9 @@ pct create $CTID "$TEMPLATE_PATH" \
   --features nesting=1 \
   --unprivileged 1
 
+# Definir senha root para SSH
+pct set $CTID --password 'automacao'
+
 # Verificar se o container foi criado com sucesso
 if [ $? -ne 0 ]; then
     echo "Erro ao criar o container"
@@ -70,3 +73,4 @@ echo "Acesse o container via: pct enter $CTID"
 echo "N8N estará disponível em: http://<IP-DO-CONTAINER>:5678"
 echo "WAHA estará disponível em: http://<IP-DO-CONTAINER>:3000"
 echo "Grafana estará disponível em: http://<IP-DO-CONTAINER>:3001"
+echo "A senha SSH do root do container é: automacao"
