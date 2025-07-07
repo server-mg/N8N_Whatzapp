@@ -74,7 +74,7 @@ services:
 
   # Evolution API
   evolution-api:
-    image: davidsongomes/evolution-api:latest
+    image: evolution/evolution-api:2.5.1
     restart: always
     ports:
       - "8080:8080"
